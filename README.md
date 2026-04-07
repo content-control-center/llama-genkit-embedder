@@ -222,8 +222,6 @@ Inject a custom `*http.Client` to control timeouts, add auth headers, or use mut
 ```go
 plugin := llama.New(llama.Config{
 	LlamaEmbedServerAddress: "https://embed.internal",
-	ModelName:     "embeddinggemma-300m",
-	Dimensions:    896,
 	HTTPClient: &http.Client{
 		Timeout: 10 * time.Second,
 		Transport: &http.Transport{
