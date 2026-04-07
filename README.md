@@ -237,17 +237,6 @@ plugin := llama.New(llama.Config{
 
 ---
 
-## Config reference
-
-| Field | Type | Default | Description |
-|-------|------|---------|-------------|
-| `LlamaEmbedServerAddress` | `string` | — | Base URL of the llama-embedserver, e.g. `"http://localhost:8080"`. **Required.** |
-| `ModelName` | `string` | `"llama"` | Human-readable name; used as the embedder's registry key (`"llama/<ModelName>"`) and its `Label`. |
-| `Dimensions` | `int` | `0` | Vector size the model produces. `0` leaves it unset in Genkit metadata. |
-| `HTTPClient` | `*http.Client` | 30 s timeout | Custom HTTP client. Useful for timeouts, TLS, or auth middleware. |
-
----
-
 ## Repository layout
 
 ```
