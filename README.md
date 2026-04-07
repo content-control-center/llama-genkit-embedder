@@ -122,7 +122,7 @@ Requires Go 1.24+ and `github.com/firebase/genkit/go` v1.6+.
 ### Start the embedding server
 
 ```bash
-docker run --rm -p 8080:8080 ghcr.io/content-control-center/llama-embedserver:latest
+docker run --rm -p 8080:8080 serhiiherasymovbndigital/llama-embedserver:latest
 ```
 
 The model is baked into the image — no volume mounts needed.
