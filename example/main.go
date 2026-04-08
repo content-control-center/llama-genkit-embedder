@@ -17,7 +17,7 @@ import (
 	"github.com/firebase/genkit/go/ai"
 	"github.com/firebase/genkit/go/genkit"
 
-	llama "github.com/content-control-center/llama-genkit-embedder/llama"
+	llama "github.com/alephbet-ai/llama-genkit-embedder/llama"
 )
 
 func main() {

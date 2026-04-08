@@ -1,4 +1,4 @@
-module github.com/content-control-center/llama-genkit-embedder
+module github.com/alephbet-ai/llama-genkit-embedder
 
 go 1.25.0
 

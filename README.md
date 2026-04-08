@@ -1,7 +1,7 @@
 # llama-genkit-embedder
 
 A [Firebase Genkit](https://github.com/firebase/genkit) Go plugin that exposes the
-[llama-embedserver](https://github.com/content-control-center/llama-embedserver) as a
+[llama-embedserver](https://github.com/alephbet-ai/llama-embedserver) as a
 first-class `ai.Embedder`. Drop it into any Genkit application to generate text embeddings
 from a locally-running, self-hosted model — no cloud API keys, no data leaving your
 infrastructure.
@@ -26,7 +26,7 @@ without knowing anything about the underlying transport.
 ## Tight coupling with llama-embedserver
 
 This plugin is intentionally coupled to
-[`github.com/content-control-center/llama-embedserver`](https://github.com/content-control-center/llama-embedserver).
+[`github.com/alephbet-ai/llama-embedserver`](https://github.com/alephbet-ai/llama-embedserver).
 It is **not** a generic HTTP-to-embedder adapter.
 
 The wire format is fixed to match the server's REST API exactly:
@@ -110,7 +110,7 @@ future per-request parameters (task type hints, truncation mode) are added.
 ## Installation
 
 ```bash
-go get github.com/content-control-center/llama-genkit-embedder
+go get github.com/alephbet-ai/llama-genkit-embedder
 ```
 
 Requires Go 1.24+ and `github.com/firebase/genkit/go` v1.6+.
@@ -122,7 +122,7 @@ Requires Go 1.24+ and `github.com/firebase/genkit/go` v1.6+.
 ### Start the embedding server
 
 ```bash
-docker run --rm -p 8080:8080 serhiiherasymovbndigital/llama-embedserver:latest
+docker run --rm -p 8080:8080 alephbetai/llama-embedserver:latest
 ```
 
 The model is baked into the image — no volume mounts needed.
@@ -140,7 +140,7 @@ import (
 	"github.com/firebase/genkit/go/ai"
 	"github.com/firebase/genkit/go/genkit"
 
-	llama "github.com/content-control-center/llama-genkit-embedder/llama"
+	llama "github.com/alephbet-ai/llama-genkit-embedder/llama"
 )
 
 func main() {

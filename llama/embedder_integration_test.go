@@ -16,7 +16,7 @@ import (
 	"github.com/firebase/genkit/go/ai"
 )
 
-const serverImage = "serhiiherasymovbndigital/llama-embedserver:latest"
+const serverImage = "alephbetai/llama-embedserver:latest"
 
 // integrationURL is set once by TestMain and shared across all integration tests.
 var integrationURL string

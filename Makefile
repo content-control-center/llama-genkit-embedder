@@ -19,7 +19,7 @@ test-race: ## Run unit tests with the race detector
 	go test -race -v -count=1 ./llama/
 
 test-integration: ## Pull the server image and run integration tests (requires Docker)
-	docker pull serhiiherasymovbndigital/llama-embedserver:latest
+	docker pull alephbetai/llama-embedserver:latest
 	go test -v -count=1 -tags integration -timeout 10m ./llama/
 
 vet: ## Run go vet
